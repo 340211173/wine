@@ -59,6 +59,12 @@ typedef struct tagDPWS_DATA
     LPDIRECTPLAYSP  lpISP;
 } DPWS_DATA, *LPDPWS_DATA;
 
+typedef struct tagDPWS_PLAYER_DATA
+{
+    SOCKADDR_IN tcpAddr;
+    SOCKADDR_IN udpAddr;
+} DPWS_PLAYER_DATA, *LPDPWS_PLAYER_DATA;
+
 typedef struct tagDPSP_MSG_HEADER
 {
     DWORD       size;           /* size & 0x000FFFFF, token & 0xFFF00000 */
