@@ -2919,6 +2919,7 @@ static HRESULT DP_SecureOpen
   if( dwFlags & DPOPEN_JOIN )
   {
     LPDPSESSIONDESC2 current = NULL;
+    NS_ResetSessionEnumeration( This->dp2->lpNameServerData );
     while( ( current = NS_WalkSessions( This->dp2->lpNameServerData ) ) )
     {
       if ( IsEqualGUID( &lpsd->guidInstance, &current->guidInstance ) )
