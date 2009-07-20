@@ -2809,7 +2809,7 @@ static HRESULT DP_IF_GetPlayerName
     lpName->u1.lpszShortNameA = NULL;
   }
 
-  if( lpPList->lpPData->name.u1.lpszShortNameA )
+  if( lpPList->lpPData->name.u2.lpszLongNameA )
   {
     strcpy( ((char*)lpName)+lpPList->lpPData->name.dwSize,
             lpPList->lpPData->name.u2.lpszLongNameA );
